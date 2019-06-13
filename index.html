@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>ICD-10基本分類による死亡数統計1.0 厚生労働統計協会 2019</title>
+<link rel="stylesheet"
+  href="http://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.min.css" />
+<link rel="stylesheet" href="./chart_map/chart_map.css">
+
+<style>
+</style>
+
+</head>
+
+  <body>
+
+  <div class="titlediv">
+     <b>ICD10基本分類による時系列死亡数統計（1999年-2017年）</b><br/>
+  </div>
+
+  <div class="detaildiv">
+     &nbsp;・章 => 中間分類項目 => 死因分類項目の順に選択してください。
+     <br/>&nbsp;・表示種別は総数/年齢5歳階級内訳/0-4歳各歳内訳より、性別は合計/男/女より選択できます。
+  </div>
+
+  <div class="selectiondiv">
+      
+      表示種別：
+      <select id="type" size=1 style="width: 200px">
+      </select>
+      
+      &nbsp&nbsp性別:
+      <select id="gender" size=1 style="width: 100px">
+      </select>
+      
+      <br/>
+      <select id="l1menu" size=5 style="width: 300px">
+      </select>
+      
+      <select id="l2menu" size=5 style="width: 300px">
+      </select>
+      
+      <select id="l3menu" size=5 style="width: 300px">
+      </select>
+      
+  </div>
+
+  <div id="sChartdiv">
+  </div>
+
+  <div class="footerdiv">
+    (*)ICD（疾病、傷害および死因統計分類）基本分類による性、年齢5歳階級別死亡数データを提供しています。
+     提供するデータはすでに人口動態調査として公表されているものですが
+     （１）死亡数統計にICD基本分類(４桁)コードだけではなく、日本語の死因分類名を掲載していること、
+     （２）1999年（平成11年）から2017年（平成29年）までの19年間の死因分類別の時系列統計表を掲載していること
+     が特徴です。<br/>
+  </div>
+    
+</div>
+
+    
+<script src="./jquery/jquery-1.12.4.min.js"></script>
+<script src="./jquery/jquery-ui.min.js"></script>
+<script src="./amcharts/amcharts.js"></script>
+<script src="./amcharts/serial.js"></script>
+<script src="./amcharts/themes/light.js"></script>
+<script src="./amcharts/ammap.js"></script>
+<script src="./amcharts/maps/js/japanLow.js"></script>
+
+<script src="./amcharts/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="./amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+<script src="./chart_map/menu123.js" charset="uft-8"></script>
+<script src="./chart_map/chart_map.js"  charset="uft-8"></script>
+<script src="./chart_map/parms.js"  charset="uft-8"></script>
+<script src="./RE02icd_4char_list.js"  charset="uft-8"></script>
+
+</body>
+</html>
+
